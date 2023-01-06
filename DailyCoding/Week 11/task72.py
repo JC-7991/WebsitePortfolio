@@ -91,16 +91,16 @@ def maxString(graph_string: str, edge_list: List[Tuple[int, int]]) -> Optional[i
         new_paths = strHelper(graph_path, node, adjacency_map)
         paths.extend(new_paths)
 
-    max_value = 0
+    maxValue = 0
 
     for path in paths:
 
-        max_path_value = max(path.letter_counts.values())
+        maxPath = max(path.letter_counts.values())
 
-        if max_path_value > max_value:
-            max_value = max_path_value
+        if maxPath > maxValue:
+            maxValue = maxPath
 
-    return max_value if max_value > 0 else None
+    return maxValue if maxValue > 0 else None
 
 
 if __name__ == "__main__":
