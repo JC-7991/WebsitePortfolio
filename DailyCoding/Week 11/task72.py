@@ -32,7 +32,7 @@ class GraphPath:
         return "nodes={}, letters={}".format(self.nodes, self.letter_counts)
 
 
-def get_max_value_string_helper(graph_path: GraphPath, node: str, adjacency_map: Dict[str, Set[str]]) -> List[GraphPath]:
+def strHelper(graph_path: GraphPath, node: str, adjacency_map: Dict[str, Set[str]]) -> List[GraphPath]:
 
     if node in graph_path.nodes:
         return [graph_path]
@@ -54,12 +54,12 @@ def get_max_value_string_helper(graph_path: GraphPath, node: str, adjacency_map:
     paths = list()
 
     for child_node in adjacency_map[node]:
-        new_paths = get_max_value_string_helper(new_graph_path, child_node, adjacency_map)
+        new_paths = strHelper(new_graph_path, child_node, adjacency_map)
         paths.extend(new_paths)
 
     return paths
 
-def get_max_value_string(graph_string: str, edge_list: List[Tuple[int, int]]) -> Optional[int]:
+def maxString(graph_string: str, edge_list: List[Tuple[int, int]]) -> Optional[int]:
 
     letter_counts = dict()
     nodes = list()
@@ -88,7 +88,7 @@ def get_max_value_string(graph_string: str, edge_list: List[Tuple[int, int]]) ->
     graph_path = GraphPath()
 
     for node in adjacency_map:
-        new_paths = get_max_value_string_helper(graph_path, node, adjacency_map)
+        new_paths = strHelper(graph_path, node, adjacency_map)
         paths.extend(new_paths)
 
     max_value = 0
@@ -99,11 +99,11 @@ def get_max_value_string(graph_string: str, edge_list: List[Tuple[int, int]]) ->
 
         if max_path_value > max_value:
             max_value = max_path_value
-            
+
     return max_value if max_value > 0 else None
 
 
 if __name__ == "__main__":
 
-    print(get_max_value_string("ABACA", [(0, 1), (0, 2), (2, 3), (3, 4)]))
-    print(get_max_value_string("A", [(0, 0)]))
+    print(maxString("ABACA", [(0, 1), (0, 2), (2, 3), (3, 4)]))
+    print(maxString("A", [(0, 0)]))
