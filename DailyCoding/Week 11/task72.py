@@ -39,14 +39,14 @@ def strHelper(graph_path: GraphPath, node: str, adj_map: Dict[str, Set[str]]) ->
 
     new_nodes = graph_path.nodes.copy()
     new_nodes.add(node)
-    new_letter_counts = graph_path.letters.copy()
+    new_letters = graph_path.letters.copy()
 
-    if node[0] not in new_letter_counts:
-        new_letter_counts[node[0]] = 0
+    if node[0] not in new_letters:
+        new_letters[node[0]] = 0
 
-    new_letter_counts[node[0]] += 1
+    new_letters[node[0]] += 1
 
-    new_graph_path = GraphPath(new_nodes, new_letter_counts)
+    new_graph_path = GraphPath(new_nodes, new_letters)
 
     if node not in adj_map:
         return [new_graph_path]
