@@ -29,7 +29,7 @@ class GraphPath:
         self.letters = letters
 
     def __repr__(self) -> str:
-        return "nodes={}, letters={}".format(self.nodes, self.letters)
+        return "nodes = {}, letters = {}".format(self.nodes, self.letters)
 
 
 def strHelper(graph_path: GraphPath, node: str, adj_map: Dict[str, Set[str]]) -> List[GraphPath]:
