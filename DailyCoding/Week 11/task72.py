@@ -24,12 +24,12 @@ from typing import Dict, List, Optional, Set, Tuple
 
 class GraphPath:
 
-    def __init__(self, nodes: Set[str] = set(), letter_counts: Dict[str, int] = dict()) -> None:
+    def __init__(self, nodes: Set[str] = set(), letters: Dict[str, int] = dict()) -> None:
         self.nodes = nodes
-        self.letter_counts = letter_counts
+        self.letters = letters
 
     def __repr__(self) -> str:
-        return "nodes={}, letters={}".format(self.nodes, self.letter_counts)
+        return "nodes={}, letters={}".format(self.nodes, self.letters)
 
 
 def strHelper(graph_path: GraphPath, node: str, adj_map: Dict[str, Set[str]]) -> List[GraphPath]:
@@ -39,7 +39,7 @@ def strHelper(graph_path: GraphPath, node: str, adj_map: Dict[str, Set[str]]) ->
 
     new_nodes = graph_path.nodes.copy()
     new_nodes.add(node)
-    new_letter_counts = graph_path.letter_counts.copy()
+    new_letter_counts = graph_path.letters.copy()
 
     if node[0] not in new_letter_counts:
         new_letter_counts[node[0]] = 0
@@ -61,18 +61,18 @@ def strHelper(graph_path: GraphPath, node: str, adj_map: Dict[str, Set[str]]) ->
 
 def maxString(graph_string: str, edge_list: List[Tuple[int, int]]) -> Optional[int]:
 
-    letter_counts = dict()
+    letters = dict()
     nodes = list()
 
     for char in graph_string:
 
-        if char not in letter_counts:
-            letter_counts[char] = 0
+        if char not in letters:
+            letters[char] = 0
 
         else:
-            letter_counts[char] += 1
+            letters[char] += 1
 
-        nodes.append("{}{}".format(char, letter_counts[char]))
+        nodes.append("{}{}".format(char, letters[char]))
 
     adj_map = dict()
 
@@ -95,7 +95,7 @@ def maxString(graph_string: str, edge_list: List[Tuple[int, int]]) -> Optional[i
 
     for path in paths:
 
-        maxPath = max(path.letter_counts.values())
+        maxPath = max(path.letters.values())
 
         if maxPath > maxValue:
             maxValue = maxPath
