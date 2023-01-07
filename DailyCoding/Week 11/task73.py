@@ -23,3 +23,5 @@ class Solution:
             curr.next = prev
             prev = curr
             curr = nxt
+        
+        return prev
