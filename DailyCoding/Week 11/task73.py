@@ -15,3 +15,7 @@ class Solution:
 
         curr = head
         prev = None
+
+        while curr:
+            
+            nxt = curr.next
