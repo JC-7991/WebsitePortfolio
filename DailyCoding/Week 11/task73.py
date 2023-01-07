@@ -9,5 +9,9 @@ class ListNode:
 class Solution:
 
     def reverseList(self, head: ListNode) -> ListNode:
+
         if not head:
             return
+
+        curr = head
+        prev = None
