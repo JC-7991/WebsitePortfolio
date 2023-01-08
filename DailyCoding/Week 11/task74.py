@@ -15,7 +15,7 @@ And there are 4 12's in the table.'''
 
 def frequency(n, x):
 
-    count = 0
+    cnt = 0
 
     for i in range(1, n + 1):
         for j in range(1, i + 1):
@@ -23,11 +23,11 @@ def frequency(n, x):
             if i * j == x:
 
                 if i == j:
-                    count += 1
+                    cnt += 1
                 else:
-                    count += 2
+                    cnt += 2
 
-    return count
+    return cnt
 
 if __name__ == "__main__":
     print(frequency(6, 12))
