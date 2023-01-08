@@ -13,7 +13,7 @@ the multiplication table looks like this:
 | 6 | 12 | 18 | 24 | 30 | 36 |
 And there are 4 12's in the table.'''
 
-def frequency(n: int, x: int) -> int:
+def frequency(n, x):
 
     count = 0
 
