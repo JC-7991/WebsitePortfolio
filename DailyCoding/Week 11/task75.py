@@ -15,17 +15,16 @@ def lengthX(arr, n):
     if n == 1:
         return 1
 
-    maxEndingHere = 1
+    end = 1
  
     for i in range(1, n):
-
         res = lengthX(arr, i)
-        if arr[i - 1] < arr[n - 1] and res+1 > maxEndingHere:
-            maxEndingHere = res + 1
+        if arr[i - 1] < arr[n - 1] and res+1 > end:
+            end = res + 1
  
-    maximum = max(maximum, maxEndingHere)
+    maximum = max(maximum, end)
  
-    return maxEndingHere
+    return end
  
  
 def lengthY(arr):
@@ -33,6 +32,7 @@ def lengthY(arr):
     global maximum
     n = len(arr)
     maximum = 1
+    
     lengthX(arr, n)
  
     return maximum
