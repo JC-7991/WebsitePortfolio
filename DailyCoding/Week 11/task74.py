@@ -13,7 +13,7 @@ the multiplication table looks like this:
 | 6 | 12 | 18 | 24 | 30 | 36 |
 And there are 4 12's in the table.'''
 
-def calculate_frequency(n: int, x: int) -> int:
+def frequency(n: int, x: int) -> int:
 
     count = 0
 
@@ -30,9 +30,4 @@ def calculate_frequency(n: int, x: int) -> int:
     return count
 
 if __name__ == "__main__":
-
-    print(calculate_frequency(6, 12))
-    print(calculate_frequency(1, 1))
-    print(calculate_frequency(2, 4))
-    print(calculate_frequency(3, 6))
-    print(calculate_frequency(3, 3))
+    print(frequency(6, 12))
