@@ -24,3 +24,24 @@ tsr
 Your function should return 3, since we would need to remove all the columns to order it.
 '''
 
+from typing import List
+
+def colRemove(matrix: List[List[int]]) -> int:
+
+    rows, columns = len(matrix), len(matrix[0])
+    cnt = 0
+
+    for column in range(columns):
+        for row in range(rows - 1):
+
+            if matrix[row][column] > matrix[row + 1][column]:
+                cnt += 1
+                break
+
+    return cnt
+
+
+if __name__ == "__main__":
+    print(colRemove(["cba", "daf", "ghi"]))
+    print(colRemove(["abcdef"]))
+    print(colRemove(["zyx", "wvu", "tsr"]))
