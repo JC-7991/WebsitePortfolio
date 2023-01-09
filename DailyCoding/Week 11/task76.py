@@ -1,6 +1,6 @@
 '''
 You are given an N by M 2D matrix of lowercase letters. 
-Determine the minimum number of columns that can be removed to 
+Determine the minimum number of cols that can be removed to 
 ensure that each row is ordered from top to bottom lexicographically. 
 That is, the letter at each column is lexicographically later as you go
 down each row. It does not matter whether each row itself is 
@@ -21,7 +21,7 @@ As another example, given the following table:
 zyx
 wvu
 tsr
-Your function should return 3, since we would need to remove all the columns to order it.
+Your function should return 3, since we would need to remove all the cols to order it.
 '''
 
 from typing import List
@@ -29,10 +29,10 @@ from typing import List
 def colRemove(matrix: List[List[int]]) -> int:
 
     rows = len(matrix)
-    columns = len(matrix[0])
+    cols = len(matrix[0])
     cnt = 0
 
-    for column in range(columns):
+    for column in range(cols):
         for row in range(rows - 1):
 
             if matrix[row][column] > matrix[row + 1][column]:
@@ -41,8 +41,8 @@ def colRemove(matrix: List[List[int]]) -> int:
 
     return cnt
 
-
 if __name__ == "__main__":
+
     print(colRemove(["cba", "daf", "ghi"]))
     print(colRemove(["abcdef"]))
     print(colRemove(["zyx", "wvu", "tsr"]))
