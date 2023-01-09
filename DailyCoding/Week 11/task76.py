@@ -28,7 +28,8 @@ from typing import List
 
 def colRemove(matrix: List[List[int]]) -> int:
 
-    rows, columns = len(matrix), len(matrix[0])
+    rows = len(matrix)
+    columns = len(matrix[0])
     cnt = 0
 
     for column in range(columns):
