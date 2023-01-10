@@ -20,7 +20,7 @@ def mergeInv(intervals):
     print("Merged intervals:", end = " ")
 
     for i in range(len(stack)):
-        print(stack[i], end=" ")
+        print(stack[i], end = " ")
 
 if __name__ == "__main__":
 
