@@ -16,11 +16,11 @@ def mergeIntervals(intervals):
         else:
             stack.append(i)
  
-    print("The Merged Intervals are: ", end = " ")
+    print("Merged intervals:", end = " ")
 
     for i in range(len(stack)):
         print(stack[i], end=" ")
 
 if __name__ == "__main__":
-    arr = [[6, 8], [1, 9], [2, 4], [4, 7]]
+    arr = [[1, 3], [5, 8], [4, 10], [20, 25]]
     mergeIntervals(arr)
