@@ -16,8 +16,6 @@ def mergeInv(ints):
             stack[-1][-1] = max(stack[-1][-1], i[-1])
         else:
             stack.append(i)
- 
-    print("Merged ints:", end = " ")
 
     for i in range(len(stack)):
         print(stack[i], end = " ")
