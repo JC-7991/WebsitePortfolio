@@ -3,11 +3,13 @@ Given k sorted singly linked lists, write a function to merge all the lists into
 '''
 
 class Node:
+    
 	def __init__(self, data):
 		self.data = data
 		self.next = None
 
 def printList(node):
+
 	while(node != None) :
 		print(node.data, end =" ")
 		node = node.next
