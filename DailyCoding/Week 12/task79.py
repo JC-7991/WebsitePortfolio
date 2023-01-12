@@ -28,7 +28,7 @@ def check(arr, n):
 
             modify += 1
 
-            if (arr[i] == arr[i - 1] or arr[i] == arr[i + 1]):
+            if(arr[i] == arr[i - 1] or arr[i] == arr[i + 1]):
                 return False
 
     if(modify > 1):
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     arr = [10, 5, 7]
     n = len(arr)
 
-    if (check(arr, n)):
+    if(check(arr, n)):
         print("Yes.")
     else:
         print("No.")
