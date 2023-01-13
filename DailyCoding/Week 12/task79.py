@@ -7,7 +7,7 @@ Given the array [10, 5, 1], you should return false, since we can't
 modify any one element to get a non-decreasing array.
 '''
 
-def check(arr, n):
+def modify(arr, n):
  
     modify = 0
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     arr = [10, 5, 7]
     n = len(arr)
 
-    if(check(arr, n)):
+    if(modify(arr, n)):
         print("Yes.")
     else:
         print("No.")
