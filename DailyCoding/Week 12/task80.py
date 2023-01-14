@@ -16,23 +16,23 @@ class Node:
         self.right = None
         self.visited = False
 
-def find(root, level, maxLevel, res):
+def find(root, level, max, res):
  
     if(root != None):
 
         level += 1
-        find(root.left, level, maxLevel, res)
-        if (level > maxLevel[0]):
+        find(root.left, level, max, res)
+        if (level > max[0]):
             res[0] = root.data
-            maxLevel[0] = level
+            max[0] = level
          
-        find(root.right, level, maxLevel, res)
+        find(root.right, level, max, res)
 
 def deepestNode(root) :
  
     res = [-1]
-    maxLevel = [-1]
-    find(root, 0, maxLevel, res)
+    max = [-1]
+    find(root, 0, max, res)
     return res[0]
                          
 if __name__ == '__main__':
