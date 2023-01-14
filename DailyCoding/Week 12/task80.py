@@ -22,6 +22,7 @@ def find(root, level, max, res):
 
         level += 1
         find(root.left, level, max, res)
+        
         if (level > max[0]):
             res[0] = root.data
             max[0] = level
