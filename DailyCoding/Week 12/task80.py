@@ -16,18 +16,18 @@ class Node:
         self.right = None
         self.visited = False
 
-def find(root, level, max, res):
+def find(root, lvl, max, res):
  
     if(root != None):
 
-        level += 1
-        find(root.left, level, max, res)
+        lvl += 1
+        find(root.left, lvl, max, res)
 
-        if (level > max[0]):
+        if (lvl > max[0]):
             res[0] = root.data
-            max[0] = level
+            max[0] = lvl
          
-        find(root.right, level, max, res)
+        find(root.right, lvl, max, res)
 
 def deepest(root) :
  
