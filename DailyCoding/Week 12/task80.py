@@ -8,8 +8,9 @@ Given the root of a binary tree, return a deepest node. For example, in the foll
 d
 '''
 
-class newNode:
+class Node:
     def __init__(self, data):
+
         self.data= data
         self.left = None
         self.right = None
@@ -36,10 +37,10 @@ def deepestNode(root) :
                          
 if __name__ == '__main__':
 
-    root = newNode(1)
-    root.left = newNode(2)
-    root.right = newNode(3)
-    root.left.left = newNode(4)
-    root.right.left = newNode(5)
-    root.right.right = newNode(6)
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.left.left = Node(4)
+    root.right.left = Node(5)
+    root.right.right = Node(6)
     print(deepestNode(root))
