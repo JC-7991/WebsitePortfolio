@@ -29,7 +29,7 @@ def find(root, level, max, res):
          
         find(root.right, level, max, res)
 
-def deepestNode(root) :
+def deepest(root) :
  
     res = [-1]
     max = [-1]
@@ -42,5 +42,5 @@ if __name__ == '__main__':
     root.left = Node(2)
     root.right = Node(3)
     root.left.left = Node(4)
-    
-    print(deepestNode(root))
+
+    print(deepest(root))
