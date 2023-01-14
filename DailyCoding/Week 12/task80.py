@@ -22,7 +22,7 @@ def find(root, level, max, res):
 
         level += 1
         find(root.left, level, max, res)
-        
+
         if (level > max[0]):
             res[0] = root.data
             max[0] = level
@@ -42,6 +42,5 @@ if __name__ == '__main__':
     root.left = Node(2)
     root.right = Node(3)
     root.left.left = Node(4)
-    root.right.left = Node(5)
-    root.right.right = Node(6)
+    
     print(deepestNode(root))
