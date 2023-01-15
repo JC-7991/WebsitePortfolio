@@ -14,7 +14,6 @@ def mappings(convert: Dict[str, str], string: str, result: List[str] = []) -> Li
         return result
 
     if not result:
-
         for elem in convert[string[0]]:
             result.append(elem)
         return mappings(convert, string[1:], result)
@@ -26,7 +25,7 @@ def mappings(convert: Dict[str, str], string: str, result: List[str] = []) -> Li
             temp.append(part + elem)
     
     result[:] = temp
-    
+
     return mappings(convert, string[1:], result)
 
 if __name__ == "__main__":
