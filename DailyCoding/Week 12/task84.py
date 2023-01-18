@@ -35,15 +35,15 @@ class Graph:
     def countIslands(self):
 
         visited = [[False for j in range(self.COL)]for i in range(self.ROW)]
-        count = 0
+        cnt = 0
 
         for i in range(self.ROW):
             for j in range(self.COL):
                 if visited[i][j] == False and self.graph[i][j] == 1:
                     self.DFS(i, j, visited)
-                    count += 1
+                    cnt += 1
  
-        return count
+        return cnt
 
 if __name__ == "__main__":
  
@@ -60,5 +60,5 @@ if __name__ == "__main__":
     
     g = Graph(row, col, graph)
     
-    print("Number of islands is:")
+    print("Number of islands:")
     print(g.countIslands())
