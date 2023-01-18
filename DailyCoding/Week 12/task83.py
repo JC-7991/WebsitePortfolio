@@ -40,7 +40,8 @@ class Solution:
 
         if root == None:
             return
-        root.left, root.right = self.invertTree(root.right),self.invertTree(root.left)
+
+        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
         return root
 
 if __name__ == "__main__":
