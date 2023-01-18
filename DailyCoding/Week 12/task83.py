@@ -46,11 +46,11 @@ class Solution:
 
 if __name__ == "__main__":
 
-    Tree = Node(10)
-    Tree.left = Node(20)
-    Tree.right = Node(30)
-    Tree.left.left = Node(40)
-    Tree.right.right = Node(50)
+    Tree = Node(1)
+    Tree.left = Node(2)
+    Tree.right = Node(3)
+    Tree.left.left = Node(4)
+    Tree.right.right = Node(5)
 
     print('Initial Tree:', end = ' ' )
     Tree.printTree()
