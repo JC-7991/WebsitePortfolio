@@ -57,7 +57,6 @@ if __name__ == "__main__":
     
     row = len(graph)
     col = len(graph[0])
-    
     g = Graph(row, col, graph)
     
     print("Number of islands:")
