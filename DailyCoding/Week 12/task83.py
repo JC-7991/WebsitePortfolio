@@ -19,18 +19,20 @@ should become:
 class Node:
 
    def __init__(self, data):
+
       self.left = None
       self.right = None
       self.data = data
 
-   def PrintTree(self):
+   def printTree(self):
 
         if self.left:
-            self.left.PrintTree()
-        print( self.data, end = ' '),
+            self.left.printTree()
+
+        print( self.data, end = ' ')
 
         if self.right:
-            self.right.PrintTree ()
+            self.right.printTree()
 
 class Solution:
 
@@ -50,7 +52,7 @@ if __name__ == "__main__":
     Tree.right.right = Node(50)
 
     print('Initial Tree:', end = ' ' )
-    Tree.PrintTree()
+    Tree.printTree()
     Solution().invertTree(root = Tree)
     print('\nInverted Tree:', end = ' ')
-    Tree.PrintTree()
+    Tree.printTree()
