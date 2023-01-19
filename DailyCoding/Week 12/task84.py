@@ -59,5 +59,4 @@ if __name__ == "__main__":
     col = len(graph[0])
     g = Graph(row, col, graph)
     
-    print("Number of islands:")
-    print(g.countIslands())
+    print("Number of islands:"), print(g.countIslands())
