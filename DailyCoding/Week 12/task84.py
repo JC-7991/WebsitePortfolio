@@ -24,13 +24,13 @@ class Graph:
 
     def DFS(self, i, j, visited):
 
-        rowNbr = [-1, -1, -1,  0, 0,  1, 1, 1]
-        colNbr = [-1,  0,  1, -1, 1, -1, 0, 1]
+        row_num = [-1, -1, -1,  0, 0,  1, 1, 1]
+        col_num = [-1,  0,  1, -1, 1, -1, 0, 1]
         visited[i][j] = True
 
         for k in range(8):
-            if self.isSafe(i + rowNbr[k], j + colNbr[k], visited):
-                self.DFS(i + rowNbr[k], j + colNbr[k], visited)
+            if self.isSafe(i + row_num[k], j + col_num[k], visited):
+                self.DFS(i + row_num[k], j + col_num[k], visited)
  
     def countIslands(self):
 
