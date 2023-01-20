@@ -9,5 +9,8 @@ def switch(x, y, b):
     return (x * b) + (y * abs(b - 1))
 
 if __name__ == "__main__":
+
     print(switch(3, 5, 1))
     print(switch(3, 5, 0))
+    print(switch(7, 21, 1))
+    print(switch(7, 21, 0))
