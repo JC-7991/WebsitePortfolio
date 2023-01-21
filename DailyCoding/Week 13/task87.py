@@ -54,11 +54,13 @@ class Map:
 
         if node1 not in self.nodes:
             self.nodes[node1.val] = node1
+
         else:
             node1 = self.nodes[node1.val]
 
         if node2 not in self.nodes:
             self.nodes[node2.val] = node2
+            
         else:
             node2 = self.nodes[node2.val]
 
@@ -81,7 +83,7 @@ if __name__ == "__main__":
 
     m.add_rule("A N B")
     print("Rule Applied!")
-    
+
     m.add_rule("B NE C")
     print("Rule Applied!")
 
