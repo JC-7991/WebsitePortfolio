@@ -8,7 +8,7 @@ Given the string ")(", you should return 2, since we must remove all of them.
 
 class Solution:
 
-    def validRemove(self, S: str) -> str:
+    def validRemove(self, S):
 
         S, stack = list(S), []
 
