@@ -5,15 +5,18 @@ or modulus operators. Return the quotient as an integer, ignoring the remainder.
 
 def divide(dividend: int, divisor: int) -> int:
 
-    quo = 0
+    quotient = 0
 
     while dividend > 0:
+
         dividend -= divisor
         if dividend >= 0:
-            quo += 1
+            quotient += 1
 
-    return quo
+    return quotient
 
 if __name__ == "__main__":
-    print(divide(1, 0))
+    print(divide(5, 25))
+    print(divide(3, 24))
+    print(divide(2, 5))
 
