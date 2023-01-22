@@ -22,5 +22,7 @@ def divide(dividend, divisor):
     return quotient
  
 if __name__ == "__main__":
-    print(divide(10, 3))
+
+    print(divide(25, 5))
     print(divide(43, -8))
+    print(divide(100, 3))
