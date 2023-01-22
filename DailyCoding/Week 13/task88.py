@@ -3,20 +3,24 @@ Implement division of two positive integers without using the division, multipli
 or modulus operators. Return the quotient as an integer, ignoring the remainder.
 '''
 
-def divide(dividend: int, divisor: int) -> int:
+def divide(dividend, divisor):
+ 
+    sign = -1 if ((dividend < 0) ^ (divisor < 0)) else 1
 
+    dividend = abs(dividend)
+    divisor = abs(divisor)
+ 
     quotient = 0
 
-    while dividend > 0:
-
+    while(dividend >= divisor):
         dividend -= divisor
-        if dividend >= 0:
-            quotient += 1
-
+        quotient += 1
+ 
+    if sign == -1:
+        quotient = -quotient
+ 
     return quotient
-
+ 
 if __name__ == "__main__":
-    print(divide(5, 25))
-    print(divide(3, 24))
-    print(divide(2, 5))
-
+    print(divide(10, 3))
+    print(divide(43, -8))
