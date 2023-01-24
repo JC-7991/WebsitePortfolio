@@ -14,7 +14,7 @@ class Node:
         self.right = None
  
 def maxValue(node):
-    
+
     if node is None:
         return 0
      
@@ -22,6 +22,7 @@ def maxValue(node):
     rightMax = maxValue(node.right)
      
     value = 0
+
     if leftMax > rightMax:
         value = leftMax
     else:
@@ -41,6 +42,7 @@ def minValue(node):
     rightMax = minValue(node.right)
      
     value = 0
+    
     if leftMax < rightMax:
         value = leftMax
     else:
