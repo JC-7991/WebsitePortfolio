@@ -42,7 +42,7 @@ def minValue(node):
     rightMax = minValue(node.right)
      
     value = 0
-    
+
     if leftMax < rightMax:
         value = leftMax
     else:
@@ -78,6 +78,6 @@ if __name__ == "__main__":
     root.left.right = Node(3)
 
     if isBST(root) is True:
-        print("Is BST")
+        print("Is a valid BST.")
     else:
-        print("Not a BST")
+        print("Is not a valid BST.")
