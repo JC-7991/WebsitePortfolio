@@ -9,16 +9,7 @@ should return ['CSC100', 'CSC200', 'CSCS300'].
 
 from typing import Dict, List, Optional, Set, Tuple
 
-def get_order_helper(
-
-    course_map: Dict[str, str],
-    course: str,
-    order: List[str],
-    processed: Set[str],
-    break_limit: Optional[int] = None,
-    curr: int = 0,
-
-) -> Tuple[Optional[List[int]], Optional[Set[int]]]:
+def get_order_helper(course_map: Dict[str, str], course: str, order: List[str], processed: Set[str], break_limit: Optional[int] = None, curr: int = 0):
 
     if not break_limit:
         break_limit = len(course_map)
