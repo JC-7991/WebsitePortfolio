@@ -33,31 +33,37 @@ def get_order_helper(
         return order, processed
 
     for prerequisite in course_map[course]:
-        order, processed = get_order_helper(
-            course_map, prerequisite, order, processed, break_limit, curr + 1
-        )
+
+        order, processed = get_order_helper(course_map, prerequisite, order, processed, break_limit, curr + 1)
+
         if order is None:
             return None, None
+
     order.append(course)
     processed.add(course)
+    
     return order, processed
 
 
 def get_order(course_map: Dict[str, str]) -> Optional[List[str]]:
+
     order = []
     processed = set()
 
     for course in course_map:
         if course not in processed:
+
             for prerequisite in course_map[course]:
                 if prerequisite not in processed:
-                    order, processed = get_order_helper(
-                        course_map, prerequisite, order, processed
-                    )
+
+                    order, processed = get_order_helper(course_map, prerequisite, order, processed)
+
                     if order is None:
                         return None
+
             order.append(course)
             processed.add(course)
+
     return order
 
 
