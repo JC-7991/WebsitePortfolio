@@ -38,7 +38,7 @@ def get_order_helper(course_map: Dict[str, str], course: str, order: List[str], 
     return order, processed
 
 
-def get_order(course_map: Dict[str, str]) -> Optional[List[str]]:
+def get_order(course_map: Dict[str, str]):
 
     order = []
     processed = set()
