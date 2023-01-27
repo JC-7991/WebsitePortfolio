@@ -9,10 +9,10 @@ IMAX = 2147483647
 def largestBST(root):
 
     if root == None:
-        return IMAX,IMIN,0
+        return IMAX, IMIN, 0
 
     if(root.left == None and root.right == None):
-        return root.data,root.data,1
+        return root.data, root.data, 1
          
     left = largestBST(root.left)
     right = largestBST(root.right)
@@ -39,7 +39,7 @@ sys.setrecursionlimit(1000000)
 from collections import deque
 
 class newNode:
-    
+
     def __init__(self, val):
         self.right = None
         self.data = val
