@@ -16,7 +16,7 @@ def largestBST(root):
          
     left = largestBST(root.left)
     right = largestBST(root.right)
-    ans = [0,0,0]
+    ans = [0, 0, 0]
          
     if left[1] < root.data and right[0] > root.data:
 
@@ -36,7 +36,7 @@ def largestBSTUtil(root):
 
 import sys
 sys.setrecursionlimit(1000000)
-from collections import deque
+#from collections import deque
 
 class newNode:
 
