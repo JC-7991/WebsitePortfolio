@@ -2,6 +2,8 @@
 Given a tree, find the largest tree/subtree that is a BST.
 Given a tree, return the size of the largest tree/subtree that is a BST.
 '''
+import sys
+sys.setrecursionlimit(1000000)
 
 IMIN = -2147483648
 IMAX = 2147483647
@@ -33,11 +35,7 @@ def largestBST(root):
  
 def largestBSTUtil(root):
     return largestBST(root)[2]
-
-import sys
-sys.setrecursionlimit(1000000)
-#from collections import deque
-
+    
 class newNode:
 
     def __init__(self, val):
