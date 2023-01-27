@@ -28,17 +28,18 @@ def largestBST(root):
     ans[0] = IMIN
     ans[1] = IMAX
     ans[2] = max(left[2], right[2])
+
     return ans
  
 def largestBSTUtil(root):
     return largestBST(root)[2]
-     
-#  Driver Code Starts
+
 import sys
 sys.setrecursionlimit(1000000)
 from collections import deque
-# Tree Node
+
 class newNode:
+    
     def __init__(self, val):
         self.right = None
         self.data = val
