@@ -8,7 +8,7 @@ possible, return the permutation with the lowest value/ordering. For example, th
 
 from typing import List
 
-def get_next(arr: List[int]):
+def next(arr: List[int]):
 
     length = len(arr)
 
@@ -37,6 +37,6 @@ def get_next(arr: List[int]):
 
 if __name__ == "__main__":
 
-    print(get_next([1, 2, 3]))
-    print(get_next([1, 3, 2]))
-    print(get_next([3, 2, 1]))
+    print(next([1, 2, 3]))
+    print(next([1, 3, 2]))
+    print(next([3, 2, 1]))
