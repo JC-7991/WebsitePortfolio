@@ -39,7 +39,4 @@ if __name__ == "__main__":
 
     print(get_next([1, 2, 3]))
     print(get_next([1, 3, 2]))
-    print(get_next([2, 1, 3]))
-    print(get_next([2, 3, 1]))
-    print(get_next([3, 1, 2]))
     print(get_next([3, 2, 1]))
