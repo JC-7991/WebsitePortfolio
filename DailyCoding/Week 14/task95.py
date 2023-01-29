@@ -11,6 +11,7 @@ from typing import List
 def get_next(arr: List[int]):
 
     length = len(arr)
+
     if length < 2:
         return arr
 
@@ -28,10 +29,11 @@ def get_next(arr: List[int]):
             break
 
     size = (length - 1) + index
+
     for i in range(index, (size + 1) // 2):
         arr[i], arr[size - i] = arr[size - i], arr[i]
-    return arr
 
+    return arr
 
 if __name__ == "__main__":
 
