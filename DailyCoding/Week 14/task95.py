@@ -8,7 +8,7 @@ For example, the list [1,2,3] should return [1,3,2]. The list [1,3,2] should ret
 
 from typing import List
 
-def get_next(arr: List[int]) -> List[int]:
+def get_next(arr: List[int]):
 
     length = len(arr)
     if length < 2:
