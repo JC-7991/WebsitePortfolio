@@ -24,6 +24,7 @@ def get_neighbors(positons: Position, n: int, m: int) -> List[Position]:
     result = []
 
     for neighbor in neighbors:
+        
         i, j = neighbor
         if i <= i < n and 0 <= j < m:
             result.append(neighbor)
@@ -63,7 +64,7 @@ def exists(board: Board, string: str) -> bool:
             if string[0] == elem:
                 if exists_helper(board, (row_index, index), string[1:], set()):
                     return True
-                    
+
     return False
 
 if __name__ == "__main__":
