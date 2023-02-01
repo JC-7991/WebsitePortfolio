@@ -54,6 +54,7 @@ def exists_helper(board: Board, position: Position, string: str, visited: Set[Po
     return False
 
 def exists(board: Board, string: str) -> bool:
+
     if not string:
         return True
 
@@ -62,6 +63,7 @@ def exists(board: Board, string: str) -> bool:
             if string[0] == elem:
                 if exists_helper(board, (row_index, index), string[1:], set()):
                     return True
+                    
     return False
 
 if __name__ == "__main__":
