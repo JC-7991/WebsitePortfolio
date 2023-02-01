@@ -31,22 +31,27 @@ def get_neighbors(positons: Position, n: int, m: int) -> List[Position]:
     return result
 
 
-def exists_helper(
-    board: Board, position: Position, string: str, visited: Set[Position] = set()
-) -> bool:
+def exists_helper(board: Board, position: Position, string: str, visited: Set[Position] = set()) -> bool:
+
     if not string:
         return True
-    # using backtracking to generate the result as every position can be used only once
+
     neighbors = get_neighbors(position, len(board), len(board[0]))
+
     for neighbor in neighbors:
+
         i, j = neighbor
-        if (board[i][j] == string[0]) and (neighbor not in visited):
+
+        if(board[i][j] == string[0]) and (neighbor not in visited):
+
             visited.add((i, j))
+
             if exists_helper(board, (i, j), string[1:], visited):
                 return True
-            visited.remove((i, j))
-    return False
 
+            visited.remove((i, j))
+
+    return False
 
 def exists(board: Board, string: str) -> bool:
     if not string:
