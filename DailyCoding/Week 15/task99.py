@@ -15,6 +15,7 @@ def findLongest(arr, n):
     x = []
     x.append(arr[0])
 
+    # Repeated elements are only inserted once into the vector.
     for i in range(1, n):
         if(arr[i] != arr[i - 1]):
             x.append(arr[i])
