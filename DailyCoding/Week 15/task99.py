@@ -10,4 +10,5 @@ def findLongest(arr, n):
 
     ans = 0
     cnt = 0
-    
+
+    arr.sort()
