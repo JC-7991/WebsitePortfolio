@@ -17,7 +17,7 @@ def findLongest(arr, n):
 
     # Repeated elements are only inserted once into the vector.
     for i in range(1, n):
-        
+
         if(arr[i] != arr[i - 1]):
             x.append(arr[i])
 
@@ -35,5 +35,5 @@ if __name__ == "__main__":
 
     arr = [100, 4, 200, 1, 3, 2]
     n = len(arr)
-    print("Length of the Longest contiguous subsequence is", findLongest(arr, n))
+    print("Length of the longest contiguous subsequence is", findLongest(arr, n))
  
