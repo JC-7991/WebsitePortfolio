@@ -18,4 +18,5 @@ to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
 
 def shortPath(p1, p2):
 
-    dx = abs(p1[0] - p2[0])
+    xx = abs(p1[0] - p2[0])
+    yy = abs(p1[1] - p2[1])
