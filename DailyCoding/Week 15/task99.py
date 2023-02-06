@@ -19,3 +19,11 @@ def findLongest(arr, n):
     for i in range(1, n):
         if(arr[i] != arr[i - 1]):
             x.append(arr[i])
+
+    for i in range(len(v)):
+        if(i > 0 and x[i] == x[i - 1]):
+            count += 1
+        else:
+            count = 1
+
+    
