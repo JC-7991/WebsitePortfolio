@@ -20,3 +20,8 @@ def shortPath(p1, p2):
     x = abs(p1[0] - p2[0])
     y = abs(p1[1] - p2[1])
     return max(x, y)
+
+def cover(seq, size):
+    cnt = 0
+    for i in range(size - 1):
+        cnt += shortPath(seq[i], seq[i + 1])
