@@ -16,3 +16,6 @@ Example: Input: [(0, 0), (1, 1), (1, 2)] Output: 2 It takes 1 step to move from 
 to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
 '''
 
+def shortPath(p1, p2):
+
+    dx = abs(p1[0] - p2[0])
