@@ -29,3 +29,7 @@ def findLongest(arr, n):
         ans = max(ans, cnt)
 
     return ans
+
+if __name__ == "__main__":
+    
+    arr = []
