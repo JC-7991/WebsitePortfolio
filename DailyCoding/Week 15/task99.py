@@ -20,10 +20,12 @@ def findLongest(arr, n):
         if(arr[i] != arr[i - 1]):
             x.append(arr[i])
 
-    for i in range(len(v)):
-        if(i > 0 and x[i] == x[i - 1]):
-            count += 1
-        else:
-            count = 1
+    for i in range(len(x)):
 
-    
+        if(i > 0 and x[i] == x[i - 1]):
+            cnt += 1
+        else:
+            cnt = 1
+        ans = max(ans, cnt)
+
+    return ans
