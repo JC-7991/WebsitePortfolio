@@ -26,3 +26,8 @@ def cover(seq, size):
     for i in range(size - 1):
         cnt += shortPath(seq[i], seq[i + 1])
     return cnt
+
+if __name__ == "__main__":
+    arr = [(0, 0), (1, 1), (1, 2)]
+    n = len(arr)
+    print(cover(arr, n))
