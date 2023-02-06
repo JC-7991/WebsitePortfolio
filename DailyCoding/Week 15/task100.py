@@ -25,3 +25,4 @@ def cover(seq, size):
     cnt = 0
     for i in range(size - 1):
         cnt += shortPath(seq[i], seq[i + 1])
+    return cnt
