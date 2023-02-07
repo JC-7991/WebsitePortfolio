@@ -36,8 +36,8 @@ def findPair(n):
 
     for i in range(0, n):
         if(isPrime[i] and isPrime[n - i]):
-            print(i, (n - 1))
+            print(i, (n - i))
             return
 
 if __name__ == "__main__":
-    findPair(74)
+    findPair(4)
