@@ -12,3 +12,5 @@ If [a, b] is one solution with a <= b, and [c, d] is another solution with c <= 
 if a < c or a==c and b < d.
 '''
 
+def generate(n, isPrime):
+    isPrime[0] = isPrime[1] = False
