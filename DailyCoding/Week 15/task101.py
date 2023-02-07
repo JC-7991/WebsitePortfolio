@@ -19,7 +19,7 @@ def generate(n, isPrime):
         isPrime[i] = True
     x = 2
 
-    while(2 * 2 <= n):
+    while(x * x <= n):
 
         if(isPrime[x] == True):
 
@@ -30,7 +30,14 @@ def generate(n, isPrime):
         x += 1
 
 def findPair(n):
+
     isPrime = [0] * (n + 1)
+    generate(n, isPrime)
+
+    for i in range(0, n):
+        if(isPrime[i] and isPrime[n - i]):
+            print(i, (n - 1))
+            return
 
 if __name__ == "__main__":
-    pass
+    findPair(74)
