@@ -18,6 +18,13 @@ def generate(n, isPrime):
     for i in range(2, n + 1):
         isPrime[i] = True
     x = 2
+
     while(2 * 2 <= n):
+
         if(isPrime[x] == True):
-            pass
+            
+            i = x * x
+            while(i <= n):
+                isPrime[i] = False
+                i += x
+        x += 1
