@@ -13,7 +13,11 @@ if a < c or a==c and b < d.
 '''
 
 def generate(n, isPrime):
-    
+
     isPrime[0] = isPrime[1] = False
     for i in range(2, n + 1):
         isPrime[i] = True
+    x = 2
+    while(2 * 2 <= n):
+        if(isPrime[x] == True):
+            pass
