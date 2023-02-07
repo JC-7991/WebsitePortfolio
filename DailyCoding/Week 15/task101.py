@@ -40,4 +40,7 @@ def findPair(n):
             return
 
 if __name__ == "__main__":
+
+    findPair(100)
+    findPair(7)
     findPair(4)
