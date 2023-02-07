@@ -22,9 +22,12 @@ def generate(n, isPrime):
     while(2 * 2 <= n):
 
         if(isPrime[x] == True):
-            
+
             i = x * x
             while(i <= n):
                 isPrime[i] = False
                 i += x
         x += 1
+
+def findPair(n):
+    isPrime = [0] * (n + 1)
