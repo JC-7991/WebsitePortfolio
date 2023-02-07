@@ -31,3 +31,6 @@ def generate(n, isPrime):
 
 def findPair(n):
     isPrime = [0] * (n + 1)
+
+if __name__ == "__main__":
+    pass
