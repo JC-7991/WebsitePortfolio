@@ -23,3 +23,5 @@ def contigElements(nums, k):
                 sum -= num
             else:
                 i += 1
+    
+    return arr
