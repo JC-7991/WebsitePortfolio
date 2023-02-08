@@ -16,6 +16,10 @@ def contigElements(nums, k):
             sum += nums[i]
             arr.append(nums[i])
             i += 1
-            
+
         else:
-            pass
+            if arr:
+                num = arr.pop(0)
+                sum -= num
+            else:
+                i += 1
