@@ -25,3 +25,6 @@ def contigElements(nums, k):
                 i += 1
     
     return arr
+
+if __name__ == "__main__":
+    print(contigElements([1, 2, 3, 4, 5], 9))
