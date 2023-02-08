@@ -11,4 +11,5 @@ def contigElements(nums, k):
     i = 0
 
     while i < len(nums) and not sum == k:
-        pass
+        if nums[i] + sum <= k:
+            sum += nums[i]
