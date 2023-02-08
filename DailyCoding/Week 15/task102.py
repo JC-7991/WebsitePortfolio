@@ -5,4 +5,10 @@ For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2
 '''
 
 def contigElements(nums, k):
-    pass
+    
+    arr = []
+    sum = 0
+    i = 0
+
+    while i < len(nums) and not sum == k:
+        pass
