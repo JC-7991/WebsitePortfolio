@@ -13,3 +13,5 @@ def contigElements(nums, k):
     while i < len(nums) and not sum == k:
         if nums[i] + sum <= k:
             sum += nums[i]
+            arr.append(nums[i])
+            i += 1
