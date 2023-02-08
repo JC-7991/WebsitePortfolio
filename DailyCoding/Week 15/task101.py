@@ -42,5 +42,5 @@ def findPair(n):
 if __name__ == "__main__":
 
     findPair(100)
-    findPair(7)
+    findPair(83)
     findPair(4)
