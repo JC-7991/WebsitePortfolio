@@ -7,5 +7,5 @@ all the characters in the set, return null.
 
 from typing import Set
 
-def short():
+def short(string, chars):
     pass
