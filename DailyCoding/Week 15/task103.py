@@ -5,7 +5,5 @@ characters {a, e, i}, you should return "aeci". If there is no substring contain
 all the characters in the set, return null.
 '''
 
-from typing import Set
-
 def short(string, chars):
     pass
