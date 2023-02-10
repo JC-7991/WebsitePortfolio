@@ -7,5 +7,5 @@ all the characters in the set, return null.
 
 from typing import Set
 
-def short(string: str, characters: Set[str]) -> str:
-    char_queue, index_queue = [], []
+def short():
+    pass
