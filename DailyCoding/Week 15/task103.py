@@ -8,11 +8,13 @@ all the characters in the set, return null.
 def short(string, chars):
 
     if chars.issubset(set(string)):
+
         left = short(string[1:], chars)
         right = short(string[:-1], chars)
 
         if left and right:
             return left if len(left) < len(right) else right
+        
         elif left:
             return left
         elif right:
