@@ -20,6 +20,7 @@ def short(string, chars):
         
         elif right:
             return right
+        
         else:
             return string
 
