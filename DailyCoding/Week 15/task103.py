@@ -17,6 +17,7 @@ def short(string, chars):
         
         elif left:
             return left
+        
         elif right:
             return right
         else:
