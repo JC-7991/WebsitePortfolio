@@ -25,3 +25,6 @@ def short(string, chars):
             return string
 
     return None
+
+def shortest(string, chars: set):
+    pass
