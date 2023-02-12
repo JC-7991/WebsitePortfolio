@@ -32,27 +32,32 @@ def shortest(string, chars: set):
     end1 = None
     str = 0
     end = 0
-    temp_set = set()
+
+    temp = set()
 
     while end < len(string):
 
-        temp_set.add(string[end])
+        temp.add(string[end])
 
-        if chars.issubset(temp_set):
-            while chars.issubset(temp_set):
-                temp_set.discard(string[str])
+        if chars.issubset(temp):
+
+            while chars.issubset(temp):
+                temp.discard(string[str])
                 str += 1
+
             str -= 1
+
             if end1 is None:
                 str1 = str
                 end1 = end
+
             elif end1 - str1 > end-str:
                 str1 = str
                 end1 = end
 
             str = end
             end -= 1
-            temp_set = set()
+            temp = set()
 
         end += 1
 
