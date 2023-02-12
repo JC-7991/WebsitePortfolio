@@ -54,7 +54,6 @@ def shortest(string, chars: set):
             end -= 1
             temp_set = set()
 
-
         end += 1
 
     return string[str1:end1+1] if str1 is not None else None
