@@ -27,4 +27,33 @@ def short(string, chars):
     return None
 
 def shortest(string, chars: set):
-    pass
+    
+    final_start= None
+    final_end = None
+
+    start, end = 0, 0
+    temp_set = set()
+    while end < len(string):
+
+        temp_set.add(string[end])
+
+        if chars.issubset(temp_set):
+            while chars.issubset(temp_set):
+                temp_set.discard(string[start])
+                start += 1
+            start -= 1
+            if final_end is None:
+                final_start = start
+                final_end = end
+            elif final_end - final_start > end-start:
+                final_start = start
+                final_end = end
+
+            start = end
+            end -= 1
+            temp_set = set()
+
+
+        end += 1
+
+    return string[final_start:final_end+1] if final_start is not None else None
