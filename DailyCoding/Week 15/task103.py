@@ -28,32 +28,33 @@ def short(string, chars):
 
 def shortest(string, chars: set):
     
-    final_start= None
-    final_end = None
-
-    start, end = 0, 0
+    str1= None
+    end1 = None
+    str = 0
+    end = 0
     temp_set = set()
+
     while end < len(string):
 
         temp_set.add(string[end])
 
         if chars.issubset(temp_set):
             while chars.issubset(temp_set):
-                temp_set.discard(string[start])
-                start += 1
-            start -= 1
-            if final_end is None:
-                final_start = start
-                final_end = end
-            elif final_end - final_start > end-start:
-                final_start = start
-                final_end = end
+                temp_set.discard(string[str])
+                str += 1
+            str -= 1
+            if end1 is None:
+                str1 = str
+                end1 = end
+            elif end1 - str1 > end-str:
+                str1 = str
+                end1 = end
 
-            start = end
+            str = end
             end -= 1
             temp_set = set()
 
 
         end += 1
 
-    return string[final_start:final_end+1] if final_start is not None else None
+    return string[str1:end1+1] if str1 is not None else None
