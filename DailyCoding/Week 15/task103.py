@@ -64,7 +64,7 @@ def shortest(string, chars: set):
     return string[str1:end1 + 1] if str1 is not None else None
 
 if __name__ == "__main__":
-    
+
     print(short("figehaeci", {'a', 'e', 'i'}))
     print(short("abccbbbccbcb", {'a', 'b', 'c'}))
     print(short("abcdedbc", {'d', 'b', 'b'}))
@@ -72,9 +72,6 @@ if __name__ == "__main__":
     print(short("abcdecdb", {'b', 'c'}))
     print(short("abcdecdb", {'b', 'c', 'e'}))
     print(short("abcdecdb", {'x', 'y', 'z'}))
-
-    print('\n ---- \n')
-
     print(shortest("figehaeci", {'a', 'e', 'i'}))
     print(shortest("abccbbbccbcb", {'a', 'b', 'c'}))
     print(shortest("abcdedbc", {'d', 'b', 'b'}))
