@@ -51,7 +51,7 @@ def shortest(string, chars: set):
                 str1 = str
                 end1 = end
 
-            elif end1 - str1 > end-str:
+            elif end1 - str1 > end - str:
                 str1 = str
                 end1 = end
 
