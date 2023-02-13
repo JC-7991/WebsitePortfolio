@@ -67,12 +67,8 @@ if __name__ == "__main__":
 
     print(short("figehaeci", {'a', 'e', 'i'}))
     print(short("abccbbbccbcb", {'a', 'b', 'c'}))
-    print(short("abcdedbc", {'d', 'b', 'b'}))
-    print(short("abcdecdb", {'b', 'c', 'e'}))
     print(short("abcdecdb", {'x', 'y', 'z'}))
     
     print(shortest("figehaeci", {'a', 'e', 'i'}))
     print(shortest("abccbbbccbcb", {'a', 'b', 'c'}))
-    print(shortest("abcdedbc", {'d', 'b', 'b'}))
-    print(shortest("abcdecdb", {'b', 'c', 'e'}))
     print(shortest("abcdecdb", {'x', 'y', 'z'}))
