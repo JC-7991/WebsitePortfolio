@@ -22,16 +22,12 @@ def isPD(head):
 
     while head != None:
  
-
         i = stack.pop()
- 
-
         if head.data == i:
             ispalin = True
         else:
             ispalin = False
             break
- 
 
         head = head.ptr
  
