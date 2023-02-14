@@ -10,9 +10,8 @@ class Node:
         self.ptr = None
  
  
-def ispalindrome(head):
+def isPD(head):
  
-
     slow = head
 
     stack = []
@@ -60,6 +59,6 @@ five.ptr = six
 six.ptr = seven
 seven.ptr = None
 
-result = ispalindrome(one)
+result = isPD(one)
  
 print("isPalindrome:", result)
