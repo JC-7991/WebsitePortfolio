@@ -18,10 +18,7 @@ def isPD(head):
 
     while slow != None:
         stack.append(slow.data)
- 
-
         slow = slow.ptr
- 
 
     while head != None:
  
