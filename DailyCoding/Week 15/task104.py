@@ -4,8 +4,8 @@ For example, 1 -> 4 -> 3 -> 4 -> 1 returns true while 1 -> 4 returns false.
 '''
 
 class Node:
+
     def __init__(self, data):
- 
         self.data = data
         self.ptr = None
  
