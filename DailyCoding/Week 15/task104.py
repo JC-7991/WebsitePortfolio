@@ -35,6 +35,7 @@ def isPD(head):
     return ispalin
 
 if __name__ == "__main__":
+
     one = Node(1)
     two = Node(2)
     three = Node(3)
@@ -52,5 +53,4 @@ if __name__ == "__main__":
     seven.ptr = None
 
     result = isPD(one)
-    
     print("isPalindrome:", result)
