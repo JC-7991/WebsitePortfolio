@@ -53,4 +53,4 @@ if __name__ == "__main__":
     seven.ptr = None
 
     result = isPD(one)
-    print("isPalindrome:", result)
+    print("Is the list a palindrome (T/F):", result)
