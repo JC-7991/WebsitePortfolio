@@ -13,11 +13,8 @@ class Node:
 def isPD(head):
  
     slow = head
-
     stack = []
- 
     ispalin = True
- 
 
     while slow != None:
         stack.append(slow.data)
