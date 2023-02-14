@@ -12,13 +12,13 @@ class Node:
  
 def isPD(head):
  
-    slow = head
+    temp = head
     stack = []
     ispalin = True
 
-    while slow != None:
-        stack.append(slow.data)
-        slow = slow.ptr
+    while temp != None:
+        stack.append(temp.data)
+        temp = temp.ptr
 
     while head != None:
  
